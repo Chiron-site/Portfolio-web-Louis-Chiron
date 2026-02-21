@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louis Chiron - Mes Sites Web</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            padding-top: 60px;
+        }
+        
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .logo { font-size: 1.5rem; font-weight: 700; color: #2c3e50; }
+
+        section { padding: 5rem 5%; max-width: 1200px; margin: 0 auto; min-height: 80vh; }
+        h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #2c3e50; font-weight: 300; }
+        
+        .web-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .site-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .site-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .screen-preview {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 4px solid #333; /* Effet bordure d'écran */
+        }
+
+        .screen-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .site-title {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .site-btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .site-btn:hover {
+            background: #2c3e50;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .site-btn.disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+        }
+
+        footer { background: #2c3e50; color: white; text-align: center; padding: 2rem; margin-top: 4rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Louis Chiron | Développement Web</div>
+    </header>
+
+    <section id="sites">
+        <h2>Mes Projets Web</h2>
+        
+        <div class="web-gallery">
+            <div class="site-card">
+                <div class="screen-preview">
+                    <img src="https://via.placeholder.com/600x338/2c3e50/ffffff?text=Rodolphe+Chiron" alt="Aperçu Rodolphe Chiron">
+                </div>
+                <p class="site-title">Rodolphe Chiron | VRP Chaussures</p>
+                <a class="site-btn" href="https://chiron-site.github.io/RodolpheChiron/
+            </div>
+
+            <div class="site-card">
+                <div class="screen-preview">
+                    <img src="https://via.placeholder.com/600x338/ecf0f1/bdc3c7?text=Projet+en+cours" alt="Bientôt disponible">
+                </div>
+                <p class="site-title">Nouveau projet</p>
+                <a class="site-btn disabled" href="#">Bientôt disponible</a>
+            </div>
+
+            <div class="site-card">
+                <div class="screen-preview">
+                    <img src="https://via.placeholder.com/600x338/ecf0f1/bdc3c7?text=Projet+en+cours" alt="Bientôt disponible">
+                </div>
+                <p class="site-title">Nouveau projet</p>
+                <a class="site-btn disabled" href="#">Bientôt disponible</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Louis Chiron - Tous droits réservés</p>
+    </footer>
+
+</body>
+</html>
